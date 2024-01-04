@@ -9,14 +9,14 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	int h, s, count = 0, balance = 1;
 
 	if (tree == NULL)
-		return 0;
+		return (0);
 	h = binary_tree_height(tree);
 	s = binary_tree_size(tree);
 
 	while (count <= h)
 	{
 		count++;
-		balance*=2;
+		balance *= 2;
 	}
 	if (balance - 1 == s)
 		return (1);
